@@ -2,7 +2,7 @@
 
 
 Our aim is to help people reach a safehouse in the aftermath of a disaster, from where rescue and rehabilitation operations can be carried out faster and more efficiently. This reduces the probability of people getting lost and/or starved and/or harmed by the after effects of the original disaster.
-
+Think of this as a "dispatcher" in an emergency.
 
 ## Detecting Disaster
 1. We rely on social media and news outlets to deliver the news of a disaster having occurred in a region.
