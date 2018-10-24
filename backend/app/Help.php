@@ -8,9 +8,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Help extends Authenticatable
 {
-    use Notifiable;
     protected $table = 'help';
 
+    public $timestamps = false;
+    protected $primaryKey = 'phone_number';
     /**
      * The attributes that are mass assignable.
      *
@@ -19,7 +20,6 @@ class Help extends Authenticatable
     protected $fillable = [
         'name', 'phone_number', 'latitude','longitude',
     ];
-
     /**
      * The attributes that should be hidden for arrays.
      *
