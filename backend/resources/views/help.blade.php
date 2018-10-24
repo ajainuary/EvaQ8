@@ -7,7 +7,7 @@
         <p class="lead">Are you stuck in a disaster? fill this form to ask for assistance.</p>
       </div>
         <div class="col-md-8 order-md-1">
-          <form class="needs-validation" novalidate>
+          <form class="needs-validation" action="/create_help" novalidate>
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>

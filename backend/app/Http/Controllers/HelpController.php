@@ -12,6 +12,7 @@ class HelpController extends Controller
 
     public function create(Request $request)
     {
+        console.log($request);
         $data = $request->all();
         $data = $request->all();
       	$messages = [

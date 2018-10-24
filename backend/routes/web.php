@@ -17,3 +17,4 @@ Route::get('/', function () {
 Route::get('/help', function() {
 	return view('help');
 });
+Route::post('create_help', 'HelpController@create');
