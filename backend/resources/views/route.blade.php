@@ -4,6 +4,8 @@
   <head>
     <title>EvaQ8R</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" >
 
     <meta charset="utf-8">
@@ -67,8 +69,8 @@
   </head>
   <body>
   	<div class= "ui main container segment">
-  		<h1 style="font-size: 75px; font-family: georgia">EvaQ8R</h1>
-  		<h2 style="text-align: right; font-family: georgia">Safe route planner</h2>
+  		<h1>EvaQ8R</h1>
+  		<h2>Safe route planner</h2>
   	</div>
     <input id="origin-input" class="controls" type="text"
         placeholder="Enter an origin location">
@@ -338,13 +340,13 @@ dindex[k]+=4;
               
  dindex[k]/=count;
  var div = document.createElement('div');
- div.className = "ui main container segment"
+ div.className = "card ui main container segment"
  document.body.appendChild(div);
- var colour = "color"+k,
+ var colour = "color"+k,    
  	 duration = "duration"+k,
  	 distance = "distance"+k,
  	 safetyi = "safetyi"+k;
- div.innerHTML = '<ul class="msg"><li id='+colour+'></li><li id='+duration+'></li><li id='+distance+'></li><li id='+safetyi+'></li></ul>';
+ div.innerHTML = '<ul class="list-group"><li class="list-group-item" id='+colour+'></li><li class="list-group-item" id='+duration+'></li><li class="list-group-item" id='+distance+'></li><li class="list-group-item" id='+safetyi+'></li></ul>';
   document.getElementById(colour).innerHTML = "Route Number:  " + k + " is colored " +
       (color[k]) ;
    document.getElementById(distance).innerHTML = "Distance  : " +
