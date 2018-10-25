@@ -1,7 +1,7 @@
 @extends('app')
 @section('title', 'Request Help')
 @section('content')
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCXH2oVFOF_zVHJfPFvKb3e85W3qIy920"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUjKlnObDJwUO6f2ueMvzc3UyF_Jepd5U"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/openlocationcode/1.0.0/openlocationcode.min.js"></script>
     <script type="text/javascript">
 

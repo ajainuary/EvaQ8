@@ -84,7 +84,8 @@
 
                 <div class="links">
                     <a href="/help">Request Help</a>
-                    <a href="/api/show_help">Find SafeHouse</a>
+                    <a href="/route">Route Planner</a>
+                    <a href="/api/show_help">List Victims</a>
                 </div>
             </div>
         </div>
