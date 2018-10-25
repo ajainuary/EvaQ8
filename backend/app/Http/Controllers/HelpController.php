@@ -44,5 +44,24 @@ class HelpController extends Controller
             "message" => "Help added successfully",
             "data"   =>  $help ]); 
     }
+    public function display_all_people(Request $request)
+    {
+        $people = Help::all();
+         return view('show', compact('people'));
+    //    if(count($people) == 0 ){
+    //     return response()->json([
+    //         "status" => "FAILURE",
+    //         "code"  =>   "200", 
+    //         "message" => "No person found",
+    //         "data"   =>  $people
+    //       ]);
+    //   }
+    //   return response()->json([
+    //         "status" => "SUCCESS",
+    //         "code"  =>   "200", 
+    //         "message" => "People fetched successfully",
+    //         "data"   =>  $people ]); 
+    }   
+
 
 }

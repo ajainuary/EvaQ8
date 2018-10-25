@@ -17,4 +17,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('create_help', 'HelpController@create');
+Route::get('show_help', 'HelpController@display_all_people');
 
