@@ -23,26 +23,31 @@ class HelpController extends Controller
     	           'lname' => 'required',
     	           'phone_number' => 'required',
     	       ]);
-
+             
     	       if ($validator->fails()) {
-    	         return response()->json([
-    	      "status" => "FAILURE",
-    	      "code"  =>   "200",
-    	      "message" => "Validation Error",
-    	      "errors" => $validator->errors()]);
+                $errors = $validator->errors();
+                return view('registration_errors', compact('errors'));
     	       }
-        $help = new Help;
-        $help->name = $data['fname'].$data['lname'];
-        $help->phone_number = $data['phone_number'];
-        $help->latitude = $data['latitude'];
-        $help->longitude = $data['longitude'];
-        $help->status = "1";
-        $help->save();
-        return response()->json([
-            "status" => "SUCCESS",
-            "code"  =>   "200", 
-            "message" => "Help added successfully",
-            "data"   =>  $help ]); 
+        $newhelp = new Help;
+        $newhelp->name = $data['fname'].$data['lname'];
+        $newhelp->phone_number = $data['phone_number'];
+        $newhelp->latitude = $data['latitude'];
+        $newhelp->longitude = $data['longitude'];
+        $newhelp->status = "1";
+        try{
+        $newhelp->save();
+        return view('registered', compact('newhelp'));
+        }
+        catch(Exception $e){
+            $errors = "Some Error Occurred";
+            return view('registration_errors', compact('errors'));
+        }
     }
+    public function display_all_people(Request $request)
+    {
+        $people = Help::all();
+         return view('show', compact('people'));
+    }   
+
 
 }
