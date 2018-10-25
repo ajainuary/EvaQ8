@@ -18,7 +18,7 @@ class Help extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'phone_number', 'latitude','longitude',
+        'name', 'phone_number', 'latitude','longitude','id',
     ];
     /**
      * The attributes that should be hidden for arrays.
