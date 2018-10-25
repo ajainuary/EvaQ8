@@ -12,7 +12,6 @@ class HelpController extends Controller
 
     public function create(Request $request)
     {
-        console.log($request);
         $data = $request->all();
         $data = $request->all();
       	$messages = [
@@ -20,7 +19,8 @@ class HelpController extends Controller
 
     	];
     	$validator = Validator::make($data, [
-    	           'name' => 'required',
+                   'fname' => 'required',
+    	           'lname' => 'required',
     	           'phone_number' => 'required',
     	       ]);
 
@@ -32,11 +32,11 @@ class HelpController extends Controller
     	      "errors" => $validator->errors()]);
     	       }
         $help = new Help;
-        $help->name = $data['name'];
+        $help->name = $data['fname'].$data['lname'];
         $help->phone_number = $data['phone_number'];
         $help->latitude = $data['latitude'];
         $help->longitude = $data['longitude'];
-        $help->status = $data['status'];
+        $help->status = "1";
         $help->save();
         return response()->json([
             "status" => "SUCCESS",

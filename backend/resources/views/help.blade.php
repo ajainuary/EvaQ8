@@ -7,18 +7,18 @@
         <p class="lead">Are you stuck in a disaster? fill this form to ask for assistance.</p>
       </div>
         <div class="col-md-8 order-md-1">
-          <form class="needs-validation" action="/create_help" novalidate>
+          <form class="needs-validation" action="/api/create_help" method="post" novalidate>
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" name="fname"required>
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" name="lname" required>
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
@@ -26,7 +26,7 @@
             </div>
             <div class="mb-3">
               <label for="phone_number">Contact No.</label>
-              <input type="text" class="form-control" id="phone_number" placeholder="We can reach you for assistance">
+              <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="We can reach you for assistance">
               <div class="invalid-feedback">
                 Please enter a valid contact no. for updates.
               </div>
@@ -41,8 +41,8 @@
             </div>
 
             <div class="mb-3">
-              <label for="logtitude">Longtitude</label>
-              <input type="text" class="form-control" id="longtitude" name="logtitude">
+              <label for="longitude">Longitude</label>
+              <input type="text" class="form-control" id="longitude" name="longitude">
             </div>
             <hr class="mb-4">
             <div class="custom-control custom-checkbox">
