@@ -1,6 +1,9 @@
 @extends('app')
 @section('title', 'Request Help')
 @section('content')
+<br>
+<h1 class="display-3" align="center">Registered People</h1>
+<br>
 <table class="table">
   <thead class="thead-dark">
     <tr>
